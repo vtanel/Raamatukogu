@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1><b>Raamatu registreerimine</b></h1>
+<h1><b>Raamatu sisestamine</b></h1>
 
 <form action="" method="POST" >
 
