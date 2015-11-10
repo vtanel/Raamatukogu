@@ -28,7 +28,7 @@
             <td><input type="number" name="quantity"></td>
         </tr>
         <tr>
-            <td><input type="submit" name="submit"> </td>
+            <td><input type="submit" name="Salvesta"> </td>
         </tr>
     </table>
 </form>

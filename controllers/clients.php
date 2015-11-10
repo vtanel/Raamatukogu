@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
         // insert new client into database
         $sql = "INSERT INTO client (fname, lname, p_code, mobile, mail, blacklist, total_rent)
         VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[p_code]',
-        '$_POST[mobile]', '$_POST[e_mail]', 0, 1)";
+        '$_POST[mobile]', '$_POST[e_mail]', 0, 0)";
 
         if (mysqli_query($db, $sql)) {
             echo "Klient edukalt sisestatud";
