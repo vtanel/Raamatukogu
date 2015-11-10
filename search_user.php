@@ -17,11 +17,13 @@
 
 <body>
 
+<h1><b>Kasutajad</b></h1>
+
 <div class="search_user">
 
     <form method="post">
-        <input type="search" name="search"/>
-        <input type="submit" name="submit" value="Esita"/>
+        <input type="search" name="search" placeholder="Otsi kasutajat..."/>
+        <input type="submit" name="submit" value="Otsi"/>
     </form>
 
     <table border="1px">
@@ -36,6 +38,9 @@
     </table>
 
 </div>
+
+<br>
+<a href="admin_page.php" class="href">ESILEHELE</a>
 
 </body>
 </html>

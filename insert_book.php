@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<h1><b>Raamatu registreerimine</b></h1>
+
 <form action="" method="POST" >
 
     <table>
@@ -34,12 +36,15 @@
             <td><input type="text" name="email"></td>
         </tr>
         <tr>
-            <td><input type="submit"> </td>
+            <td><input type="submit" value="Salvesta"> </td>
         </tr>
 
 
     </table>
 </form>
+
+<br>
+<a href="admin_page.php" class="href">ESILEHELE</a>
 
 </body>
 </html>
