@@ -13,7 +13,7 @@
     <table>
         <tr>
             <td>Eesnimi: </td>
-            <td><input type="text" name="fname"></td>
+            <td><input type="text" max="" name="fname"></td>
         </tr>
         <tr>
             <td>Perekonnanimi: </td>
@@ -21,19 +21,15 @@
         </tr>
         <tr>
             <td>Isikukood: </td>
-            <td><input type="text" name="isikukood"></td>
+            <td><input type="number" name="p_code"></td>
         </tr>
         <tr>
             <td>Mobiil: </td>
-            <td><input type="text" name="mobiil_tel"></td>
-        </tr>
-        <tr>
-            <td>Tavatelefon: </td>
-            <td><input type="text" name="tel_nr"></td>
+            <td><input type="number" name="mobile"></td>
         </tr>
         <tr>
             <td>Email: </td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="e_mail"></td>
         </tr>
         <tr>
             <td><input type="submit" value="Salvesta"> </td>
@@ -52,3 +48,6 @@
 
 <?php
 
+require ('controllers/clients.php');
+
+?>
