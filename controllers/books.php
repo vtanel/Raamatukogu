@@ -1,12 +1,7 @@
 <?php
 
-
 //connect to database
-$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
-
-if ($db === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+require "../connect.php";
 
 //insert book form data into database
 if (isset($_POST['submit'])) {
@@ -41,13 +36,13 @@ if (isset($_POST['submit'])) {
         // insert new book into database
         $sql = "INSERT INTO books (book_title, book_author, book_type, book_quantity)
         VALUES ('$_POST[title]', '$_POST[author]', '$_POST[type]', '$_POST[quantity]')";
-            if (mysqli_query($db, $sql)) {
+            if (mysqli_query($con, $sql)) {
                 echo "Raamat edukalt sisestatud";
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($db);
+                echo "Error: " . $sql . "<br>" . mysqli_error(con);
             }
         }
 }
 
 // Close connection
-mysqli_close($db);
+mysqli_close($con);

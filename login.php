@@ -9,7 +9,8 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['username'] = $username;
         header("Location: admin_page.php");
-    } else
+    }
+    else
         echo "Kasutajanimi või parool on vale.";
 }
 ?>

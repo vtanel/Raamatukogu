@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+require 'controllers/admins.php';
+
 ?>
 
 <!doctype html>
@@ -30,7 +33,7 @@ session_start();
 
 <body>
 
-<h1>Tere " admin #1 "</h1>
+<h1>Tere <?= $name['admin_fname']?> <?= $name['admin_lname']?></h1>
 
 <div class="navbar">
     <ul>
