@@ -26,6 +26,8 @@ CREATE TABLE `admins` (
   `admin_ID`       INT(11) NOT NULL AUTO_INCREMENT,
   `admin_username` VARCHAR(255)     DEFAULT NULL,
   `admin_password` VARCHAR(255)     DEFAULT NULL,
+  `admin_fname` VARCHAR(255)     DEFAULT NULL,
+  `admin_lname` VARCHAR(255)     DEFAULT NULL,
   PRIMARY KEY (`admin_ID`)
 )
   ENGINE = InnoDB
