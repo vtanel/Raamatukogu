@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <title>Sisselogimine</title>
