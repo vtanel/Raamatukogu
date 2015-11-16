@@ -1,11 +1,7 @@
 <?php
 
 //connect to database
-$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
-
-if ($db === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-};
+require "../connect.php";
 
 //insert client form data into database
 if (isset($_POST['submit'])) {
@@ -48,16 +44,16 @@ if (isset($_POST['submit'])) {
         VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[p_code]',
         '$_POST[mobile]', '$_POST[e_mail]', 0, 0)";
 
-        if (mysqli_query($db, $sql)) {
+        if (mysqli_query($con, $sql)) {
             echo "Klient edukalt sisestatud";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($db);
+            echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
     }
 }
 
 // Close connection
-mysqli_close($db);
+mysqli_close($con);
 
 
 
