@@ -142,7 +142,7 @@ while (($today <= 32) && ($cont)) //At 32, we have to be rolling over to the nex
     <!-- Calendar end -->
 
     <a href="login.php">
-        <div class="log_out">LOG OUT</div>
+        <div class="log_out">Logi välja</div>
     </a>
 
 </body>
