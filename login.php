@@ -2,10 +2,9 @@
 require "bootstrap.php";
 session_start();
 if (isset($_POST['submit'])) {
-    require "connect.php";
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $result = mysqli_query($con, "SELECT * FROM `admins` WHERE admin_username='$username' AND admin_password='$password'");
+    $result = mysqli_query($db, "SELECT * FROM `admins` WHERE admin_username='$username' AND admin_password='$password'");
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['username'] = $username;
         header("Location: admin_page.php");
