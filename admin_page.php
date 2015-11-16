@@ -8,6 +8,7 @@ require 'controllers/admins.php';
 <!doctype html>
 <html lang="et">
 <head>
+    <title>Raamatukogu</title>
     <meta charset="UTF-8">
     <style>
         .navbar, ul, li {

@@ -1,5 +1,5 @@
 <?php
-
+require "bootstrap.php";
 session_start();
 if (isset($_POST['submit'])) {
     require "connect.php";
@@ -9,8 +9,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['username'] = $username;
         header("Location: admin_page.php");
-    }
-    else
+    } else
         echo "Kasutajanimi või parool on vale.";
 }
 ?>
@@ -19,7 +18,7 @@ if (isset($_POST['submit'])) {
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Sisselogimine</title>
+    <title>Raamatukogu - sisselogimine</title>
 
     <style>
 
