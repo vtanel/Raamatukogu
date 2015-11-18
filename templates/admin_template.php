@@ -17,6 +17,9 @@ require 'controllers/admins.php';
 <body>
 <h1>Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?></h1>
 
+<!---Too kalender admin_page.php lehel !------->
+<?php require 'calendar.php'; ?>
+
 <div class="log_out"><a href="#">Logi Välja!</a></div>
 <br>
 
