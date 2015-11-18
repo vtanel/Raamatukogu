@@ -28,6 +28,7 @@ CREATE TABLE `admins` (
   `admin_password` varchar(255) DEFAULT NULL,
   `admin_fname` varchar(255) NOT NULL,
   `admin_lname` varchar(255) NOT NULL,
+  `admin_image` text NOT NULL,
   PRIMARY KEY (`admin_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +39,7 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-INSERT INTO `admins` VALUES (0,'admin','admin','pROOV','Proov'),(1,'test','test','TEST','TESTING');
+INSERT INTO `admins` VALUES (0,'admin','admin','pROOV','Proov','https://www.wonderplugin.com/wp-content/plugins/wonderplugin-lightbox/images/demo-image0.jpg'),(1,'test','test','TEST','TESTING','http://www.wpclipart.com/people/faces/men_faces/men_faces_04/face_man_long.png');
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-18  9:33:02
+-- Dump completed on 2015-11-18  9:44:59
