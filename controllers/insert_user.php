@@ -1,14 +1,18 @@
 <?php
 
 //connect to database
-require "../connect.php";
+$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
+
+if ($db === false) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+};
 
 //insert client form data into database
-if (isset($_POST['submit'])) {
+if (isset($_POST['insertuser'])) {
     //check if all fields have values
     if (empty($_POST['fname']) or empty($_POST['lname']) or
         empty($_POST['p_code']) or is_int($_POST['p_code']) or
-        preg_match('/^\d{11}$/', ($_POST['p_code']))===0 or
+        preg_match('/^\d{11}$/', ($_POST['p_code'])) === 0 or
         empty($_POST['mobile']) or is_int($_POST['mobile']) or
         empty($_POST['e_mail'])
     ) {
@@ -22,17 +26,15 @@ if (isset($_POST['submit'])) {
         }
         if (empty($_POST['p_code'])) {
             echo "sisesta isikukood<br>";
-        }
-        elseif (is_int($_POST['p_code'])) {
-                echo "sisesta õige isikukood<br>";
-        }
-        elseif (!preg_match('/^\d{11}$/', ($_POST['p_code']))) {
-                echo "sisesta õige isikukoodi pikkus<br>";
+        } elseif (is_int($_POST['p_code'])) {
+            echo "sisesta �ige isikukood<br>";
+        } elseif (!preg_match('/^\d{11}$/', ($_POST['p_code']))) {
+            echo "sisesta �ige isikukoodi pikkus<br>";
         }
         if (empty($_POST['mobile'])) {
             echo "sisesta mobiil<br>";
         } elseif (is_int($_POST['mobile'])) {
-            echo "sisesta õige mobiil<br>";
+            echo "sisesta �ige mobiil<br>";
         }
         if (empty($_POST['e_mail'])) {
             echo "sisesta email<br>";
@@ -44,16 +46,16 @@ if (isset($_POST['submit'])) {
         VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[p_code]',
         '$_POST[mobile]', '$_POST[e_mail]', 0, 0)";
 
-        if (mysqli_query($con, $sql)) {
+        if (mysqli_query($db, $sql)) {
             echo "Klient edukalt sisestatud";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($con);
+            echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }
     }
 }
 
 // Close connection
-mysqli_close($con);
+mysqli_close($db);
 
 
 
@@ -76,7 +78,7 @@ if (is_numeric($_POST['mobile'])) {
         echo "sisesta autor<br>";
     }
     if (empty($_POST['type'])) {
-        echo "sisesta tüüp<br>";
+        echo "sisesta t��p<br>";
     }
     if (empty($_POST['quantity']) or !is_int($_POST['quantity'])) {
         echo "sisesta kogus<br>";
