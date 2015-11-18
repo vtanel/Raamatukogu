@@ -20,7 +20,7 @@ require 'controllers/admins.php';
 <!---Too kalender admin_page.php lehel !------->
 <?php require 'calendar.php'; ?>
 
-<div class="log_out"><a href="#">Logi Välja!</a></div>
+<div class="log_out"><a href="admin_login.php">Logi Välja!</a></div>
 <br>
 
 <div class="navbar">
