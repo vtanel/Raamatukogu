@@ -1,0 +1,59 @@
+* {
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+.log_out {
+    float: right;
+}
+
+.navbar {
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #edf2f5, #085585);
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+
+}
+
+.navbar a:link {
+    color: white;
+}
+
+.navbar a:hover {
+    color: hotpink;
+}
+
+.navbar a:active {
+    color: blue;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    display: inline-block;
+
+}
+
+.navnupp {
+
+}
+
+.body {
+    margin: auto;
+    border: 1px solid red;
+    height: 250px;
+    padding: 15px 0 0 0;
+
+}

@@ -1,18 +1,3 @@
-<!doctype html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        .search_book {
-            border: 1px solid;
-            width: 280px;
-            height: 60px;
-        }
-    </style>
-</head>
-
-<body>
-
 <h1><b>Raamatud</b></h1>
 
 <div class="search_book">
@@ -20,7 +5,8 @@
         <input type="search" name="search" placeholder="Otsi raamatut..."/>
         <input type="submit" name="submit" value="Otsi"/>
     </form>
-    <table border="1px">
+    <br>
+    <table class="search-table">
         <thead>
         <td>ID</td>
         <td>PEALKIRI</td>
@@ -30,9 +16,3 @@
         </thead>
     </table>
 </div>
-
-<br>
-<a href="admin_page.php" class="href">ESILEHELE</a>
-
-</body>
-</html>

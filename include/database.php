@@ -3,7 +3,7 @@
  * Database functions
  * Not included in class to shorten typing effort.
  */
-
+require 'config.php';
 connect_db();
 function connect_db()
 {

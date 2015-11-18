@@ -1,10 +1,13 @@
 <?php
-
 //connect to database
-require "../connect.php";
+$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
+
+if ($db === false) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 
 //insert book form data into database
-if (isset($_POST['submit'])) {
+if (isset($_POST['insertbook'])) {
 
     //check if quantity is a number
     if (is_numeric($_POST['quantity'])) {
@@ -24,25 +27,24 @@ if (isset($_POST['submit'])) {
             echo "sisesta autor<br>";
         }
         if (empty($_POST['type'])) {
-            echo "sisesta tüüp<br>";
+            echo "sisesta t��p<br>";
         }
         if (empty($_POST['quantity'])) {
             echo "sisesta kogus<br>";
+        } elseif (!is_int($_POST['quantity'])) {
+            echo "sisesta �ige kogus<br>";
         }
-            elseif (!is_int($_POST['quantity'])) {
-                echo "sisesta õige kogus<br>";
-            }
     } else {
         // insert new book into database
         $sql = "INSERT INTO books (book_title, book_author, book_type, book_quantity)
         VALUES ('$_POST[title]', '$_POST[author]', '$_POST[type]', '$_POST[quantity]')";
-            if (mysqli_query($con, $sql)) {
-                echo "Raamat edukalt sisestatud";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error(con);
-            }
+        if (mysqli_query($db, $sql)) {
+            echo "Raamat edukalt sisestatud";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }
+    }
 }
 
 // Close connection
-mysqli_close($con);
+mysqli_close($db);
