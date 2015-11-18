@@ -81,8 +81,6 @@ require 'controllers/admins.php';
 
 </div>
 
-<!---Too kalender admin_page.php lehel !------->
-<?php require 'calendar.php'; ?>
 
     <a href="login.php">
         <div class="log_out">Logi välja</div>
