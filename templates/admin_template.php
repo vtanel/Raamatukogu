@@ -12,18 +12,32 @@ require 'controllers/admins.php';
     <title>Document</title>
     <link href="css/admin_template.css" rel="stylesheet" type="text/css">
     <link href="css/searchtable/tables.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        <!--
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+        //-->
+    </script>
 </head>
-
-<body>
 
 <h1>
     Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
+    <br>
     <img width="100" height="100" src="admin_images/<?php echo $_SESSION['username']; ?>.gif"/>
 </h1>
-<!---Too kalender admin_page.php lehel !------->
-<?php require 'calendar.php'; ?>
 
-<div id="log_out" class="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
+
+<!---Too kalender admin_page.php lehel !------->
+
+<a href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
+
+<div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
+<div id="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
 <br>
 <br>
 
