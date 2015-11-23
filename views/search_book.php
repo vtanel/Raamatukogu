@@ -1,17 +1,6 @@
-<!doctype html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        .search_book {
-            border: 1px solid;
-            width: 280px;
-            height: 60px;
-        }
-    </style>
-</head>
 
-<body>
+
+
 
 <h1><b>Raamatud</b></h1>
 
@@ -22,19 +11,21 @@
     </form>
     <br>
     <table class="search-table">
-        <thead>
+
+
+
+
+        <tbody>
+
         <td>ID</td>
         <td>PEALKIRI</td>
         <td>AUTOR</td>
         <td>ŽANR</td>
         <td>KOGUS</td>
-        </thead>
-
-        <tbody>
 
         <?php
 
-        require ('controllers/search_book.php')
+        include "controllers/search_book.php";
 
         ?>
 
@@ -45,5 +36,4 @@
 <br>
 <a href="admin_page.php" class="href">ESILEHELE</a>
 
-</body>
-</html>
+
