@@ -34,6 +34,6 @@
 </div>
 
 <br>
-<a href="admin_page.php" class="href">ESILEHELE</a>
+
 
 
