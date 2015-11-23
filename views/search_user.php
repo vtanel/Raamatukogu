@@ -9,13 +9,25 @@
     <br>
     <table class="search-table">
 
-        <thead>
+
+
+
+        <tbody>
+
         <td>ID</td>
         <td>EESNIMI</td>
         <td>PEREKONNANIMI</td>
+        <td>ISIKUKOOD</td>
+        <td>MOBIIL</td>
+        <td>MAIL</td>
+        <td>BLACKLIST</td>
         <td>HETKEL LAENUS</td>
-        </thead>
 
+        <?php
+        include 'controllers/search_user.php';
+        ?>
+
+        </tbody>
     </table>
 
 </div>
