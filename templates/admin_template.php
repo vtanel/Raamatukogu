@@ -37,7 +37,9 @@ require 'controllers/admins.php';
 <a href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
 
 <div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
-<div class="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
+<a href="controllers/log_out.php">
+    <div class="log_out">Logi Välja!</div>
+</a>
 <br>
 <br>
 
