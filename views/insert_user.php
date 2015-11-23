@@ -1,6 +1,4 @@
-<?php
-require_once('controllers/insert_user.php');
-?>
+
 <h1><b>Laenutaja registreerimine</b></h1>
 
 <form action="" method="POST">
@@ -33,3 +31,7 @@ require_once('controllers/insert_user.php');
 
     </table>
 </form>
+
+<?php
+require_once('controllers/insert_user.php');
+?>

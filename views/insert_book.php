@@ -1,6 +1,4 @@
-<?php
-require_once('controllers/insert_book.php');
-?>
+
 <h1><b>Raamatu sisestamine</b></h1>
 
 <form action="" method="POST">
@@ -27,3 +25,7 @@ require_once('controllers/insert_book.php');
         </tr>
     </table>
 </form>
+
+<?php
+require_once('controllers/insert_book.php');
+?>
