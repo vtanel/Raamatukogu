@@ -7,41 +7,45 @@ body {
     margin-right: auto;
     height: 100%;
 
-   }
+}
 
 #login_table {
-    margin-left:auto;
-    margin-right:auto;
-   text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     margin-top: 20%;
 }
 
 .login_btn {
-    background: #d936e8;
-    background-image: -webkit-linear-gradient(top, #d936e8, #23a6f7);
-    background-image: -moz-linear-gradient(top, #d936e8, #23a6f7);
-    background-image: -ms-linear-gradient(top, #d936e8, #23a6f7);
-    background-image: -o-linear-gradient(top, #d936e8, #23a6f7);
-    background-image: linear-gradient(to bottom, #d936e8, #23a6f7);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    -webkit-box-shadow: 2px 4px 0px #666666;
-    -moz-box-shadow: 2px 4px 0px #666666;
-    box-shadow: 2px 4px 0px #666666;
-    font-family: Arial;
-    color: #ffffff;
-    padding: 4px 9px 4px 9px;
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    padding: 3px 6px;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: white;
+    font-size: 12px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
     text-decoration: none;
+    vertical-align: middle;
 }
 
 .login_btn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
 }
 
+.login_btn:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
