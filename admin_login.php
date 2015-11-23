@@ -39,7 +39,6 @@ if (isset($_POST['login'])) {
             <tr>
                 <td>
                     <input placeholder='Parool' type='password' name='password' id='password' maxlength="15"/>
-                    <br>
                 </td>
             </tr>
 
