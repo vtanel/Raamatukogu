@@ -9,14 +9,24 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $username;
         header("Location: index.php");
     } else
-        echo "Kasutajanimi voi parool on vale.";
+        echo "<p id='login_error' align=center><font color='white'>Kasutajanimi või parool on vale.</font></p>";
 }
 ?>
 
+<!doctype html>
+<html lang="et">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Logi Sisse</title>
+    <link href="css/admin_login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
 <div id='login'>
     <form method="post" accept-charset='UTF-8'>
 
-        <table>
+        <table id="login_table">
 
             <tr>
                 <td>
@@ -33,10 +43,12 @@ if (isset($_POST['login'])) {
 
             <tr>
                 <td>
-                    <input type='submit' name='login' value='Logi sisse'/>
+                    <input class='login_btn' type='submit' name='login' value='Logi sisse'/>
                 </td>
             </tr>
 
         </table>
     </form>
 </div>
+</body>
+</html>
