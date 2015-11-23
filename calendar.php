@@ -15,6 +15,36 @@ if (isset($_GET['month'])) {
 $iTimestamp = mktime(0, 0, 0, $iMonth, $iNowDay, $iYear);
 list($sMonthName, $iDaysInMonth) = explode('-', date('F-t', $iTimestamp));
 
+//Kuud eestikeelseks
+if ($sMonthName === 'January') {
+    $sMonthName = 'Jaanuar';
+}
+if ($sMonthName === 'February') {
+    $sMonthName = 'Veebruar';
+}
+if ($sMonthName === 'March') {
+    $sMonthName = 'Märts';
+}
+if ($sMonthName === 'April') {
+    $sMonthName = 'Aprill';
+}
+if ($sMonthName === 'May') {
+    $sMonthName = 'Mai';
+}
+if ($sMonthName === 'June') {
+    $sMonthName = 'Juuni';
+}
+if ($sMonthName === 'July') {
+    $sMonthName = 'Juuli';
+}
+if ($sMonthName === 'October') {
+    $sMonthName = 'Oktoober';
+}
+if ($sMonthName === 'December') {
+    $sMonthName = 'Detsember';
+}
+
+
 // Get previous year and month
 $iPrevYear = $iYear;
 $iPrevMonth = $iMonth - 1;
