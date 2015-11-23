@@ -9,7 +9,7 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $username;
         header("Location: index.php");
     } else
-        $message = "Kasutajanimi. või parool on vale.";
+        $message = "Kasutajanimi või parool on vale.";
     echo "<script type='text/javascript'>alert('$message');</script>";
 
 }
