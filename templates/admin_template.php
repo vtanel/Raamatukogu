@@ -22,6 +22,7 @@ require 'controllers/admins.php';
 
 <div id="log_out" class="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
 <br>
+<br>
 
 <div class="navbar">
     <ul>
