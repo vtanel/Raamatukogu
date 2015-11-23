@@ -18,7 +18,7 @@ require 'controllers/admins.php';
 
 <h1>
     Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
-    <img width="100" height="100" src="images/<?php echo $_SESSION['username']; ?>.gif"/>
+    <img width="100" height="100" src="admin_images/<?php echo $_SESSION['username']; ?>.gif"/>
 </h1>
 <!---Too kalender admin_page.php lehel !------->
 <?php require 'calendar.php'; ?>
