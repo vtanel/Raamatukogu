@@ -67,6 +67,9 @@ $iPrevDaysInMonth = (int)date('t', mktime(0, 0, 0, $iPrevMonth, $iNowDay, $iPrev
 // Get numeric representation of the day of the week of the first day of specified (current) month
 $iFirstDayDow = (int)date('w', mktime(0, 0, 0, $iMonth, 1, $iYear));
 
+//Esmaspäev esimeseks päevaks
+$iFirstDayDow = $iFirstDayDow + 6;
+
 // On what day the previous month begins
 $iPrevShowFrom = $iPrevDaysInMonth - $iFirstDayDow + 1;
 
@@ -82,14 +85,25 @@ $sCalTblRows = '';
 // Generate rows for the calendar
 for ($i = 0; $i < 6; $i++) { // 6-weeks range
     $sCalTblRows .= '<tr>';
+
     for ($j = 0; $j < 7; $j++) { // 7 days a week
 
         $sClass = '';
         if ($iNowYear == $iYear && $iNowMonth == $iMonth && $iNowDay == $iCurrentDay && !$bPreviousMonth && !$bNextMonth) {
             $sClass = 'today';
-        } elseif (!$bPreviousMonth && !$bNextMonth) {
-            $sClass = 'current';
+            if ($j % 7 == 6) {
+                $sClass = 'today_sunday';
+            }
         }
+
+        elseif (!$bPreviousMonth && !$bNextMonth) {
+            $sClass = 'current';
+            if ($j % 7 == 6) {
+                $sClass = 'current_sunday';
+            }
+        }
+
+
         $sCalTblRows .= '<td class="' . $sClass . '"><a href="javascript: void(0)">' . $iCurrentDay . '</a></td>';
 
         // Next day

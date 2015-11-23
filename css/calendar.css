@@ -102,3 +102,17 @@
     font-weight: bold;
     opacity: 1;
 }
+
+#calendar table td.current_sunday a {
+    font-weight: bold;
+    opacity: 1;
+    background-color: rgba(251, 81, 72, 0.29);
+}
+
+#calendar table td.today_sunday a {
+    background-color: rgba(251, 81, 72, 0.69);
+    border: 1px solid #FCD3A1;
+    color: #444444;
+    font-weight: bold;
+    opacity: 1;
+}
