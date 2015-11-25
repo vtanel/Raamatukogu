@@ -9,7 +9,7 @@ require 'controllers/admins.php';
 <head>
 
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Raamatukogu</title>
     <link href="css/admin_template.css" rel="stylesheet" type="text/css">
     <link href="css/searchtable/tables.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
@@ -34,9 +34,10 @@ require 'controllers/admins.php';
 
 <!---Too kalender admin_page.php lehel !------->
 
-<a href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
+<a class="calender" href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
 
 <div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
+
 <a href="controllers/log_out.php">
     <div class="log_out">Logi Välja!</div>
 </a>
