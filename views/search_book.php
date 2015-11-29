@@ -1,6 +1,4 @@
-<?php
-require "controllers/search_book.php";
-?>
+
 <h1><b>Raamatud</b></h1>
 
 <div class="search_book">
@@ -10,19 +8,15 @@ require "controllers/search_book.php";
     </form>
     <br>
     <table class="search-table">
-
-
-
-
         <tbody>
 
-        <td>ID</td>
-        <td>PEALKIRI</td>
-        <td>AUTOR</td>
-        <td>ŽANR</td>
-        <td>KOGUS</td>
+            <td>ID</td>
+            <td>PEALKIRI</td>
+            <td>AUTOR</td>
+            <td>ŽANR</td>
+            <td>KOGUS</td
 
-
+            <?php require "controllers/search_book.php"; ?>
 
         </tbody>
     </table>

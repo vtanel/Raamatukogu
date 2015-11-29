@@ -1,6 +1,3 @@
-<?php
-require 'controllers/search_user.php';
-?>
 <h1><b>Kasutajad</b></h1>
 
 <div class="search_user">
@@ -11,22 +8,14 @@ require 'controllers/search_user.php';
     </form>
     <br>
     <table class="search-table">
-
-
-
-
         <tbody>
 
-        <td>ID</td>
-        <td>EESNIMI</td>
-        <td>PEREKONNANIMI</td>
-        <td>ISIKUKOOD</td>
+            <td>ID</td>
+            <td>EESNIMI</td>
+            <td>PEREKONNANIMI</td>
+            <td>ISIKUKOOD</td>
 
-        <?php
-
-        include "controllers/search_user.php";
-
-        ?>
+            <?php require 'controllers/search_user.php'; ?>
 
         </tbody>
     </table>
