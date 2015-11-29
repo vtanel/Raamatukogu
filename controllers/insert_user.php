@@ -1,7 +1,7 @@
 <?php
 
 //connect to database
-$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
+$db = mysqli_connect("127.0.0.1", "root", "", "ramps");
 
 if ($db === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -11,10 +11,10 @@ if ($db === false) {
 if (isset($_POST['insertuser'])) {
     //check if all fields have values
     if (empty($_POST['fname']) or empty($_POST['lname']) or
-        empty($_POST['p_code']) or is_int($_POST['p_code']) or
-        preg_match('/^\d{11}$/', ($_POST['p_code'])) === 0 or
-        empty($_POST['mobile']) or is_int($_POST['mobile']) or
-        empty($_POST['e_mail'])
+        empty($_POST['pcode']) or is_int($_POST['pcode']) or
+        preg_match('/^\d{11}$/', ($_POST['pcode'])) === 0 or
+        empty($_POST['phone']) or is_int($_POST['phone']) or
+        empty($_POST['email'])
     ) {
         // show what values are missing
         echo "Klienti ei saanud sisestada. <br><br>Vead:<br> ";
@@ -24,27 +24,27 @@ if (isset($_POST['insertuser'])) {
         if (empty($_POST['lname'])) {
             echo "sisesta perekonnanimi<br>";
         }
-        if (empty($_POST['p_code'])) {
+        if (empty($_POST['pcode'])) {
             echo "sisesta isikukood<br>";
-        } elseif (is_int($_POST['p_code'])) {
-            echo "sisesta �ige isikukood<br>";
-        } elseif (!preg_match('/^\d{11}$/', ($_POST['p_code']))) {
-            echo "sisesta �ige isikukoodi pikkus<br>";
+        } elseif (is_int($_POST['pcode'])) {
+            echo "sisesta õige isikukood<br>";
+        } elseif (!preg_match('/^\d{11}$/', ($_POST['pcode']))) {
+            echo "sisesta õige isikukoodi pikkus<br>";
         }
-        if (empty($_POST['mobile'])) {
+        if (empty($_POST['phone'])) {
             echo "sisesta mobiil<br>";
-        } elseif (is_int($_POST['mobile'])) {
-            echo "sisesta �ige mobiil<br>";
+        } elseif (is_int($_POST['phone'])) {
+            echo "sisesta õige mobiil<br>";
         }
-        if (empty($_POST['e_mail'])) {
+        if (empty($_POST['email'])) {
             echo "sisesta email<br>";
         }
 
     } else {
         // insert new client into database
-        $sql = "INSERT INTO client (fname, lname, p_code, mobile, mail, blacklist, total_rent)
-        VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[p_code]',
-        '$_POST[mobile]', '$_POST[e_mail]', 0, 0)";
+        $sql = "INSERT INTO clients (fname, lname, pcode, phone, email)
+        VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[pcode]',
+        '$_POST[phone]', '$_POST[email]')";
 
         if (mysqli_query($db, $sql)) {
             echo "Klient edukalt sisestatud";

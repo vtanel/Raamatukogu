@@ -1,7 +1,6 @@
-
-
-
-
+<?php
+require "controllers/search_book.php";
+?>
 <h1><b>Raamatud</b></h1>
 
 <div class="search_book">
@@ -23,11 +22,7 @@
         <td>ŽANR</td>
         <td>KOGUS</td>
 
-        <?php
 
-        include "controllers/search_book.php";
-
-        ?>
 
         </tbody>
     </table>

@@ -14,11 +14,11 @@
         </tr>
         <tr>
             <td>Tüüp:</td>
-            <td><input type="text" name="type"></td>
+            <td><input type="text" name="genre"></td>
         </tr>
         <tr>
             <td>Kogus:</td>
-            <td><input type="number" name="quantity"></td>
+            <td><input type="number" name="quantiy"></td>
         </tr>
         <tr>
             <td><input type="submit" value='Sisesta' name="insertbook"></td>

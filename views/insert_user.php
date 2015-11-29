@@ -14,15 +14,15 @@
         </tr>
         <tr>
             <td>Isikukood:</td>
-            <td><input type="number" name="p_code"></td>
+            <td><input type="number" name="pcode"></td>
         </tr>
         <tr>
-            <td>Mobiil:</td>
-            <td><input type="number" name="mobile"></td>
+            <td>Tel:</td>
+            <td><input type="number" name="phone"></td>
         </tr>
         <tr>
-            <td>Email:</td>
-            <td><input type="text" name="e_mail"></td>
+            <td>E-mail:</td>
+            <td><input type="text" name="email"></td>
         </tr>
         <tr>
             <td><input type="submit" name='insertuser' value="Salvesta"></td>

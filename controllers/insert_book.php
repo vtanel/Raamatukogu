@@ -1,6 +1,6 @@
 <?php
 //connect to database
-$db = mysqli_connect("127.0.0.1", "root", "", "raamatukogu");
+$db = mysqli_connect("127.0.0.1", "root", "", "ramps");
 
 if ($db === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -10,13 +10,13 @@ if ($db === false) {
 if (isset($_POST['insertbook'])) {
 
     //check if quantity is a number
-    if (is_numeric($_POST['quantity'])) {
-        settype($_POST['quantity'], 'integer');
+    if (is_numeric($_POST['quantiy'])) {
+        settype($_POST['quantiy'], 'integer');
     }
 
     //check if all fields have values
     if (empty($_POST['title']) or empty($_POST['author']) or
-        empty($_POST['type']) or empty($_POST['quantity']) or !is_int($_POST['quantity'])
+        empty($_POST['type']) or empty($_POST['quantiy']) or !is_int($_POST['quantiy'])
     ) {
         // show what values are missing
         echo "Raamatut ei saanud sisestada. <br><br>Vead:<br> ";
@@ -27,17 +27,57 @@ if (isset($_POST['insertbook'])) {
             echo "sisesta autor<br>";
         }
         if (empty($_POST['type'])) {
-            echo "sisesta t��p<br>";
+            echo "sisesta tüüp<br>";
         }
-        if (empty($_POST['quantity'])) {
+        if (empty($_POST['quantiy'])) {
             echo "sisesta kogus<br>";
-        } elseif (!is_int($_POST['quantity'])) {
-            echo "sisesta �ige kogus<br>";
+        } elseif (!is_int($_POST['quantiy'])) {
+            echo "sisesta õige kogus<br>";
         }
     } else {
         // insert new book into database
-        $sql = "INSERT INTO books (book_title, book_author, book_type, book_quantity)
-        VALUES ('$_POST[title]', '$_POST[author]', '$_POST[type]', '$_POST[quantity]')";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $sql =
+        "
+        INSERT INTO books (book_title, author_id, genre_id, book_quantiy)
+        VALUES (
+        '$_POST[title]',
+        SELECT ,
+        '$_POST[genre]',
+        '$_POST[quantiy]')"
+
+        ;
         if (mysqli_query($db, $sql)) {
             echo "Raamat edukalt sisestatud";
         } else {

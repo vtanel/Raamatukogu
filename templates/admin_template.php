@@ -9,38 +9,21 @@ require 'controllers/admins.php';
 <head>
 
     <meta charset="UTF-8">
-    <title>Raamatukogu</title>
+    <title>Document</title>
     <link href="css/admin_template.css" rel="stylesheet" type="text/css">
     <link href="css/searchtable/tables.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-        <!--
-        function toggle_visibility(id) {
-            var e = document.getElementById(id);
-            if (e.style.display == 'block')
-                e.style.display = 'none';
-            else
-                e.style.display = 'block';
-        }
-        //-->
-    </script>
 </head>
+
+<body>
 
 <h1>
     Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
-    <br>
     <img width="100" height="100" src="admin_images/<?php echo $_SESSION['username']; ?>.gif"/>
 </h1>
-
-
 <!---Too kalender admin_page.php lehel !------->
+<?php require 'calendar/calendar.php'; ?>
 
-<a class="calender" href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
-
-<div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
-
-<a href="controllers/log_out.php">
-    <div class="log_out">Logi Välja!</div>
-</a>
+<div id="log_out" class="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
 <br>
 <br>
 
