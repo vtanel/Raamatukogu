@@ -14,7 +14,7 @@
             <td>PEALKIRI</td>
             <td>AUTOR</td>
             <td>ŽANR</td>
-            <td>KOGUS</td
+            <td>KOGUS</td>
 
             <?php require "controllers/search_book.php"; ?>
 

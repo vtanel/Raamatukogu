@@ -43,8 +43,13 @@ if (isset($_POST['insertuser'])) {
     } else {
         // insert new client into database
         $sql = "INSERT INTO clients (fname, lname, pcode, phone, email)
-        VALUES ('$_POST[fname]', '$_POST[lname]', '$_POST[pcode]',
-        '$_POST[phone]', '$_POST[email]')";
+        VALUES
+        ('$_POST[fname]',
+         '$_POST[lname]',
+         '$_POST[pcode]',
+         '$_POST[phone]',
+         '$_POST[email]')
+         ";
 
         if (mysqli_query($db, $sql)) {
             echo "Klient edukalt sisestatud";
