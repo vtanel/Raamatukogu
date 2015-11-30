@@ -71,13 +71,13 @@ if (isset($_POST['insertbook'])) {
         '$_POST[quantiy]')"
 
         ;
-        if (mysqli_query($db, $sql)) {
+        if (mysqli_query($con, $sql)) {
             echo "Raamat edukalt sisestatud";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($db);
+            echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
     }
 }
 
 // Close connection
-mysqli_close($db);
+mysqli_close($con);

@@ -1,6 +1,6 @@
 <?php
 //connect to database
-require 'include/db.php';
+require 'connect.php';
 
 
 // Set page

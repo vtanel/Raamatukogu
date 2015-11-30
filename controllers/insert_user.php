@@ -43,16 +43,16 @@ if (isset($_POST['insertuser'])) {
          '$_POST[email]')
          ";
 
-        if (mysqli_query($db, $sql)) {
+        if (mysqli_query($con, $sql)) {
             echo "Klient edukalt sisestatud";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($db);
+            echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
     }
 }
 
 // Close connection
-mysqli_close($db);
+mysqli_close($con);
 
 
 

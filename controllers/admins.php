@@ -4,8 +4,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: admin_login.php");
 }
 
-//connect to database
-require 'connect.php';
+
 
 $user = $_SESSION['username'];
 // select admin_fname, admin_lname from database

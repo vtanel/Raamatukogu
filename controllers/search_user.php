@@ -1,13 +1,10 @@
 <?php
-
-
-
 if (isset($_POST['submit'])) {
     $keyword = $_POST['search'];
     if($keyword==""){
         echo "Sisestage otsitav.";
     }else{
-        $found_clients = mysqli_query($db,"
+        $found_clients = mysqli_query($con,"
                 SELECT clients.client_id,clients.fname, clients.lname,clients.pcode
                 FROM clients
                 WHERE

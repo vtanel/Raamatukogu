@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     if($keyword==""){
         echo "Sisestage otsitav.";
     }else {
-        $found_books = mysqli_query($db, "
+        $found_books = mysqli_query($con, "
             SELECT books.book_id, books.book_title,books.book_quantiy,authors.author_name,genres.genre_name
             FROM books
             JOIN authors ON authors.author_id  = books.author_id
