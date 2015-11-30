@@ -52,7 +52,6 @@ DROP TABLE IF EXISTS `authors`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `authors` (
   `author_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `book_id` int(11) unsigned DEFAULT NULL,
   `author_name` varchar(255) NOT NULL,
   PRIMARY KEY (`author_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -64,7 +63,7 @@ CREATE TABLE `authors` (
 
 LOCK TABLES `authors` WRITE;
 /*!40000 ALTER TABLE `authors` DISABLE KEYS */;
-INSERT INTO `authors` VALUES (1,1,'Oskar Luts');
+INSERT INTO `authors` VALUES (1,'Oskar Luts');
 /*!40000 ALTER TABLE `authors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,6 +159,7 @@ CREATE TABLE `rent` (
   `book_id` int(11) unsigned DEFAULT NULL,
   `rent_start_date` datetime DEFAULT NULL,
   `rent_end_date` datetime DEFAULT NULL,
+  `rent_return_date` datetime DEFAULT NULL,
   PRIMARY KEY (`rent_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -170,7 +170,7 @@ CREATE TABLE `rent` (
 
 LOCK TABLES `rent` WRITE;
 /*!40000 ALTER TABLE `rent` DISABLE KEYS */;
-INSERT INTO `rent` VALUES (1,1,1,'2015-11-28 06:00:00','2015-11-30 06:00:00'),(2,1,1,'2015-11-11 00:00:00','2015-11-26 00:00:00');
+INSERT INTO `rent` VALUES (0,1,1,'2015-11-12 00:00:00','2015-11-29 00:00:00',NULL),(1,1,1,'2015-11-28 06:00:00',NULL,NULL),(2,1,1,'2015-11-11 00:00:00','0000-00-00 00:00:00',NULL);
 /*!40000 ALTER TABLE `rent` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -183,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-30  9:44:01
+-- Dump completed on 2015-11-30 15:03:37

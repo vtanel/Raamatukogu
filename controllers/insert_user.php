@@ -1,12 +1,4 @@
 <?php
-
-//connect to database
-$db = mysqli_connect("127.0.0.1", "root", "", "ramps");
-
-if ($db === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-};
-
 //insert client form data into database
 if (isset($_POST['insertuser'])) {
     //check if all fields have values

@@ -34,7 +34,7 @@ require 'controllers/admins.php';
 
 <!---Too kalender admin_page.php lehel !------->
 
-<a class="calender" href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
+<a class="log_out" href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
 
 <div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
 
