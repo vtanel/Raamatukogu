@@ -14,8 +14,8 @@ if (isset($_POST['submit'])) {
                 WHERE
                 clients.client_id LIKE('%$keyword%') OR
                 clients.fname LIKE('%$keyword%') OR
-        clients.pcode LIKE('%$keyword%') OR
-        clients.lname LIKE('%$keyword%')
+                clients.pcode LIKE('%$keyword%') OR
+                clients.lname LIKE('%$keyword%')
                 ");
 
 

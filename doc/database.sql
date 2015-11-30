@@ -104,8 +104,6 @@ DROP TABLE IF EXISTS `clients`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `clients` (
   `client_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `trent_id` int(11) unsigned DEFAULT NULL,
-  `mrent_id` int(11) unsigned DEFAULT NULL,
   `fname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
   `pcode` varchar(255) NOT NULL,
@@ -121,7 +119,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,1,1,'Piilu','Part','59912158547','5555555','piilu@part.ee'),(2,NULL,NULL,'Jaana','Lind','','5454546','jaana@lind.ee'),(3,NULL,NULL,'Jaana','Lind','49802306985','5454546','jaana@lind.ee');
+INSERT INTO `clients` VALUES (1,'Piilu','Part','59912158547','5555555','piilu@part.ee'),(2,'Jaana','Lind','','5454546','jaana@lind.ee'),(3,'Jaana','Lind','49802306985','5454546','jaana@lind.ee');
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,103 +148,30 @@ INSERT INTO `genres` VALUES (1,'Draama');
 UNLOCK TABLES;
 
 --
--- Table structure for table `moment_blacklist`
+-- Table structure for table `rent`
 --
 
-DROP TABLE IF EXISTS `moment_blacklist`;
+DROP TABLE IF EXISTS `rent`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `moment_blacklist` (
-  `mlist_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `rent` (
+  `rent_id` int(10) unsigned NOT NULL DEFAULT '0',
   `client_id` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`mlist_id`)
+  `book_id` int(11) unsigned DEFAULT NULL,
+  `rent_start_date` datetime DEFAULT NULL,
+  `rent_end_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`rent_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `moment_blacklist`
+-- Dumping data for table `rent`
 --
 
-LOCK TABLES `moment_blacklist` WRITE;
-/*!40000 ALTER TABLE `moment_blacklist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `moment_blacklist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `moment_rent`
---
-
-DROP TABLE IF EXISTS `moment_rent`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `moment_rent` (
-  `mrent_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) unsigned DEFAULT NULL,
-  `book_id` int(11) unsigned DEFAULT NULL,
-  `mrent_start_date` datetime NOT NULL,
-  `mrent_end_date` datetime NOT NULL,
-  PRIMARY KEY (`mrent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `moment_rent`
---
-
-LOCK TABLES `moment_rent` WRITE;
-/*!40000 ALTER TABLE `moment_rent` DISABLE KEYS */;
-INSERT INTO `moment_rent` VALUES (1,1,1,'2015-11-28 06:00:00','2015-11-30 06:00:00'),(2,1,1,'2015-11-11 00:00:00','2015-11-26 00:00:00');
-/*!40000 ALTER TABLE `moment_rent` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `total_blacklist`
---
-
-DROP TABLE IF EXISTS `total_blacklist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `total_blacklist` (
-  `tlist_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`tlist_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `total_blacklist`
---
-
-LOCK TABLES `total_blacklist` WRITE;
-/*!40000 ALTER TABLE `total_blacklist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `total_blacklist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `total_rent`
---
-
-DROP TABLE IF EXISTS `total_rent`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `total_rent` (
-  `trent_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) unsigned DEFAULT NULL,
-  `book_id` int(11) unsigned DEFAULT NULL,
-  `trent_start_date` datetime NOT NULL,
-  `trent_end_date` datetime NOT NULL,
-  PRIMARY KEY (`trent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `total_rent`
---
-
-LOCK TABLES `total_rent` WRITE;
-/*!40000 ALTER TABLE `total_rent` DISABLE KEYS */;
-INSERT INTO `total_rent` VALUES (1,1,1,'2015-11-28 06:00:00','2015-11-30 06:00:00'),(3,1,1,'2015-11-19 00:00:00','2015-11-28 00:00:00');
-/*!40000 ALTER TABLE `total_rent` ENABLE KEYS */;
+LOCK TABLES `rent` WRITE;
+/*!40000 ALTER TABLE `rent` DISABLE KEYS */;
+INSERT INTO `rent` VALUES (1,1,1,'2015-11-28 06:00:00','2015-11-30 06:00:00'),(2,1,1,'2015-11-11 00:00:00','2015-11-26 00:00:00');
+/*!40000 ALTER TABLE `rent` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -258,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-29 18:35:51
+-- Dump completed on 2015-11-30  9:44:01
