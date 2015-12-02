@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <td>Kogus:</td>
-            <td><input type="number" name="quantiy"></td>
+            <td><input type="number" name="quantity"></td>
         </tr>
         <tr>
             <td><input type="submit" value='Sisesta' name="insertbook"></td>

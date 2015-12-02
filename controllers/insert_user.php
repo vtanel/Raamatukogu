@@ -62,22 +62,3 @@ mysqli_close($con);
 if (is_numeric($_POST['mobile'])) {
     settype($_POST['mobile'], 'integer');
 }*/
-
-
-/*if (empty($_POST['fname']) or empty($_POST['lname']) or
-    empty($_POST['type']) or empty($_POST['quantity']) or !is_int($_POST['quantity'])
-) {
-    echo "Raamatut ei saanud sisestada. <br><br>Vead:<br> ";
-    if (empty($_POST['title'])) {
-        echo "sisesta pealkiri<br>";
-    }
-    if (empty($_POST['author'])) {
-        echo "sisesta autor<br>";
-    }
-    if (empty($_POST['type'])) {
-        echo "sisesta t��p<br>";
-    }
-    if (empty($_POST['quantity']) or !is_int($_POST['quantity'])) {
-        echo "sisesta kogus<br>";
-    }
-}*/
