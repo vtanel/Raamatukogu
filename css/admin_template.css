@@ -100,3 +100,15 @@ a {
     position: relative;
     top: 1px;
 }
+
+#left {
+    float: left;
+    margin-right: 1px;
+    margin-bottom: 2px;
+}
+
+#right {
+    float: right;
+    margin-bottom: 2px;
+
+}
