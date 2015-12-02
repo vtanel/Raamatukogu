@@ -5,7 +5,7 @@ require 'connect.php';
 
 // Set page
 
-$page = !empty($_GET['page']) ? $_GET['page'] : 'index';
+$page = !empty($_GET['page']) ? $_GET['page'] : 'insert_user';
 
 
 // Include template
