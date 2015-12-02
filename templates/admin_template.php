@@ -38,8 +38,6 @@ require 'controllers/admins.php';
 
 <div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
 
-<?php require 'calendar.php'; ?>
-
 <div id="log_out" class="log_out"><a href="controllers/log_out.php">Logi Välja!</a></div>
 <br>
 <br>
