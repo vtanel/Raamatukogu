@@ -108,7 +108,11 @@ a {
 }
 
 #right {
+    position: relative;
     float: right;
     margin-bottom: 2px;
+}
 
+#down {
+    position: relative;
 }
