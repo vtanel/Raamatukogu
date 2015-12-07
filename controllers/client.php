@@ -1,6 +1,6 @@
 <?php
 $client_id = isset($_GET['id']) ? $_GET['id'] : -1;
-$q=mysqli_query($con,"
+$q = mysqli_query($con, "
 SELECT clients.client_id, clients.fname, clients.lname, clients.pcode, clients.phone, clients.email,
        rent.rent_start_date, rent.rent_end_date, rent.rent_return_date,
        books.book_title, authors.author_name,
@@ -13,8 +13,5 @@ JOIN authors ON books.author_id = authors.author_id
 
 WHERE clients.client_id=$client_id
 
-
-
-
-") or die( mysqli_error($con));
+") or die(mysqli_error($con));
 $isik = mysqli_fetch_assoc($q);
