@@ -28,13 +28,16 @@ require 'controllers/admins.php';
 <body>
 
 <h1>
-    Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
+    Tere
+    <br>
     <img width="100" height="100" src="admin_images/<?php echo $_SESSION['username']; ?>.gif"/>
+    <br>
+    <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
 </h1>
 
 <!---Too kalender admin_page.php lehel !------->
 
-<a class="log_out" href="#" onclick="toggle_visibility('calender');">Kuva kalender.</a>
+<a class="calender" href="#" onclick="toggle_visibility('calender');">Kuva kalender</a>
 
 <div id="calender" style="display:none;"><?php require 'calendar.php'; ?></div>
 
