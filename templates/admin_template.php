@@ -28,8 +28,11 @@ require 'controllers/admins.php';
 <body>
 
 <h1>
-    Tere <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
+    Tere
+    <br>
     <img width="100" height="100" src="admin_images/<?php echo $_SESSION['username']; ?>.gif"/>
+    <br>
+    <?= $name['admin_fname'], ' ' . $name['admin_lname'] ?>
 </h1>
 
 <!---Too kalender admin_page.php lehel !------->
