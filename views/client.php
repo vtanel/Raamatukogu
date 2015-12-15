@@ -1,4 +1,4 @@
-<?php require 'controllers/client.php'; ?>
+<h1 style="display: none;"><?php require_once 'controllers/client.php'; ?></h1>
 
 <table id="left" class="search-table">
     <tbody>
@@ -34,44 +34,22 @@
     </tbody>
 </table>
 
-<table id="right" class="search-table">
-    <tbody>
-    <td>Pealkiri</td>
-    <td>Autor</td>
-    <td>Kuupäevad</td>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
-    </tbody>
-</table>
+<div id="down">
+    <form method="post">
+        <input type="search" name="search" placeholder="Otsi raamatut..."/>
+        <input type="submit" name="submit" value="Otsi"/>
+    </form>
+    <br>
+    <table class="search-table">
+        <tbody>
 
-<table id="down" class="search-table">
-    <tbody>
-    <td>Autor</td>
-    <td>Pealkiri</td>
-    <td>Zanr</td>
-    <td>Lisa</td>
-    <td>Laenuta</td>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
-    </tbody>
-</table>
+        <td>Autor</td>
+        <td>Pealkiri</td>
+        <td>Zanr</td>
+        <td>Laenuta</td>
+
+        <?php require "controllers/client.php"; ?>
+
+        </tbody>
+    </table>
+</div>
