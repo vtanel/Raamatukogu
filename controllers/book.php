@@ -16,7 +16,6 @@ if (isset($_POST['changebook'])) {
     $genre = $_POST['genre'];
     $book_title = $_POST['book_title'];
     $book_quantiy = $_POST['book_quantiy'];
-
     $q = mysqli_query($con,
         "UPDATE books, authors, genres
         SET book_title = '$book_title',
@@ -24,6 +23,7 @@ if (isset($_POST['changebook'])) {
         authors.author_name = '$author_name',
         genres.genre_name = '$genre'
         WHERE authors.author_id=books.author_id AND genres.genre_id=books.genre_id AND book_id = '$book_id' ");
+
 
     if ($q) {
         echo "Andmed muudetud";

@@ -46,9 +46,10 @@
         <td>Autor</td>
         <td>Pealkiri</td>
         <td>Zanr</td>
+        <td>Kogus</td>
         <td>Laenuta</td>
 
-        <?php require "controllers/client.php"; ?>
+        <?php require "controllers/client2.php"; ?>
 
         </tbody>
     </table>

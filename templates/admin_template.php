@@ -9,7 +9,7 @@ require 'controllers/admins.php';
 <head>
 
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Raamatukogu</title>
     <link href="css/admin_template.css" rel="stylesheet" type="text/css">
     <link href="css/searchtable/tables.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
