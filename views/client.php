@@ -25,7 +25,19 @@
     </tr>
     <tr>
         <td>Hetkel laenus</td>
-        <td><?= $isik['current_rent_count'] ?></td>
+        <td>
+            <table id="left" class="search-table">
+                <tr>
+                    <?php require "controllers/client3.php"; ?>
+                </tr>
+            </table>
+            <?= $isik['current_rent_count'] ?>
+            <br>
+
+            <form method="post">
+                <input type="submit" name="rented" value="Kuva hetkel laenus raamatud">
+            </form>
+        </td>
     </tr>
     <tr>
         <td>Kogu laenutus</td>
